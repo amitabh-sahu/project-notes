@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--ff);
+}
+
+body {
+    min-width: 320px;
+    max-width: 1500px;
+    background: var(--secondary-color);
+    font-size: clamp(0.7rem, 0.1rem + 1vw, 1.5rem);
+    margin: auto;
+}
+
+textarea {
+    font-size: 1em;
+    resize: none;
+    padding: 0.25em;
+    border-radius: 0.25em;
+    background: var(--secondary-color);
+    border: 0.1em solid var(--primary-color);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--tertiary-color);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.header_container, .footer_container {
+    min-height: 3em;
+    color: var(--secondary-color);
+    background: var(--head-foot-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0em 2em;
+}
+
+.header_left, .header_right {
+    width: 50%;
+    display: flex;
+}
+
+.logo_img {
+    width: 2em;
+    margin: 0em 0.5em;
+}
+
+.logo_name {
+    font-size: 1.8em;
+}
+
+.header_right {
+    justify-content: flex-end;
+}
+
+.search_box {
+    border: none;
+    font-size: 0.9em;
+    padding: 0.25em;
+    border-radius: 0.25em;
+    background: var(--secondary-color);
+}
+
+.btn_1 {
+    font-size: 0.9em;
+    background: none;
+    border: 0.1em solid var(--aditional-color);
+    color: var(--aditional-color);
+    width: 5em;
+    border-radius: 0.25em;
+    margin: 0em 0.5em;
+}
+
+.main_container {
+    max-width: 70em;
+    color: var(--primary-color);
+    display: grid;
+    gap: 1em;
+    padding: 1em;
+    margin: auto;
+}
+
+.title {
+    font-family: 'Roboto Mono', monospace;
+    display: inline-block;
+    width: max-content;
+    font-size: 3.5em;
+    line-height: 1em;
+    margin: 0.5em auto;
+    position: relative;
+}
+
+.title::before, .title::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+}
+
+.title::before {
+    background: var(--secondary-color);
+    animation: typewriter 3s steps(17) 500ms forwards;
+}
+
+.title::after {
+    border: transparent;
+    animation: typewriter 3s steps(17) 500ms forwards, blink 500ms ease-in-out 10;
+}
+
+.new_notes, .your_notes {
+    padding: 2em;
+    border-radius: 0.25em;
+    border: 0.1em solid var(--primary-color);
+}
+
+.sub_title {
+    font-size: 2em;
+    padding-bottom: 1em;
+}
+
+.create_notes, .all_notes {
+    display: grid;
+    gap: 1em;
+}
+
+.all_notes {
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+}
+
+.btn_2 {
+    font-size: 0.9em;
+    background: var(--tertiary-color);
+    color: var(--secondary-color);
+    border: none;
+    width: max-content;
+    border-radius: 0.25em;
+    padding: 0.5em;
+}
+
+.note {
+    padding: 1em;
+    height: max-content;
+    border: 0.1em solid var(--aditional-color);
+    border-radius: 0.25em;
+    display: grid;
+    grid-template-columns: 100%;
+    word-wrap: break-word;
+    gap: 0.5em;
+}
+
+.header_container, .footer_container, .new_notes, .your_notes {
+    opacity: 0;
+    animation: fadeIn 1s ease 4s forwards;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        border-left: 0.125em solid var(--primary-color);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+:root {
+    --ff: 'Roboto', sans-serif;
+    --primary-color: #262626;
+    --secondary-color: #F8F8FF;
+    --tertiary-color: #1E90FF;
+    --head-foot-color: #2F4F4F;
+    --aditional-color:#32CD32;
+}

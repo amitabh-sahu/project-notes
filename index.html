@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <header class="header_container">
+        <div class="header_left">
+            <img src="assets/logo.svg" alt="logo" class="logo_img">
+            <h1 class="logo_name">Notes</h1>
+        </div>
+        <div class="header_right">
+            <input class="search_box" id="search_txt" placeholder="Search" type="text">
+            <button class="btn_1" id="search_btn">Search</button>
+        </div>
+    </header>
+    <main class="main_container">
+        <h1 class="title">Welcome to Notes.</h1>
+        <section class="new_notes">
+            <h3 class="sub_title">New Notes</h3>
+            <div class="create_notes">
+                <textarea id="note_title" placeholder="Title" cols="50" rows="1"></textarea>
+                <textarea id="note_text" placeholder="Enter Your Text Hear..." cols="50" rows="8"></textarea>
+                <label for="important"><input type="checkbox" id="important" name="important"> Mark as
+                    Important!</label>
+                <button class="btn_2" id="create_btn">Create Note</button>
+            </div>
+        </section>
+        <section class="your_notes">
+            <h3 class="sub_title">Your Notes</h3>
+            <div class="all_notes"></div>
+        </section>
+    </main>
+    <footer class="footer_container">
+        <p>Copyright © 2021 Notes. All rights reserved.</p>
+    </footer>
+    <script src="assets/app.js"></script>
+</body>
+
+</html>
